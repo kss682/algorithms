@@ -1,2 +1,4 @@
-# hacker-rank
-Solutions to problems in algorithm and project-euler
+# ALGORITHMS
+Code for different algorithms.
+
+Also some solutions from project-euler.
