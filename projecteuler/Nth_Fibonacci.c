@@ -1,5 +1,5 @@
 /* This program is used to find the 
-      Nth Fibonacci Number  */
+      first N digit  Fibonacci Number  */
 
 
 #include<stdio.h>
