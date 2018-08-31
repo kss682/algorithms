@@ -1,29 +1,29 @@
-def palin(i):
-  a,s=i,0
+def palindrome(i):
+  a,palin=i,0
   while(a!=0):
     b=a%10
     a=a//10
-    s=s*10+b
-  return s  
+    palin=palin*10+b
+  return palin  
 
-def base(i,K):
+def base(i,base_value):
   d,t=i,0
   while(d!=0):
-      e=d%K
-      d=d//K
+      e=d%base_value
+      d=d//base_value
       t=t*10+e
   return t  
     
 
 
 
-N,K=map(int,input().split())
-S=0
-for i in range(1,N+1):
-  c=palin(i)
-  if(i==c and i%K!=0):
-      f=base(i,K)
-      g=palin(f)
-      if(f==g):
-        S=S+i
-print(S)      
+number,base_value=map(int,input().split())
+Sum=0
+for num in range(1,number+1):
+  c=palindrome(num)
+  if num==c and num%base_value!=0:
+      f=base(num,base_value)
+      g=palindrome(f)
+      if f==g:
+        Sum=Sum+num
+print(Sum)      
