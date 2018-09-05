@@ -3,12 +3,11 @@
 
 int hash(int number,int arr[],int n)
 {
-int index=number%10;
+int index=number%10,i=1;
 while(arr[index]!=0)
-	{
-	index+=1;
-	if(index>n)
-		index=0;
+	{index=(number%10+i)%10;
+	i++;
+	
 	}
 return index;
 }
