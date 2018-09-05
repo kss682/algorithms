@@ -6,9 +6,7 @@ int hash(int number,int arr[],int n)
 int index=number%10,i=1;
 
 while(arr[index]!=0)
-	{index=number%10+i*i;
-	if(index>MAX)
-		index=index-MAX;
+	{index=(number%10+i*i)%MAX;
 	i++;
 	}
 return index;
