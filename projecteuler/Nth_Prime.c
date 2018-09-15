@@ -5,7 +5,7 @@
 int isPrime(int num)
 {
 	int m,n,flag=1;
-	for(m=2;m<num;m++)
+	for(m=2;m<sqrt(double(num));m++)
 	{
 		if(num%m==0)
 		{
@@ -36,7 +36,7 @@ void main()
 		}
 		arr[i]=j;
 	}
-	for(i=0;i<T;i++)
+	for(i=0;i<lim;i++)
 	{
 
 		printf("%d : %d \n",i,arr[i]);

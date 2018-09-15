@@ -1,3 +1,6 @@
+//Project Euler Problem :1
+
+
 #include<stdio.h>
 
 ///sum of multiples of 3 and 5 

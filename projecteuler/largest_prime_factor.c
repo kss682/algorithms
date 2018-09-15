@@ -12,7 +12,7 @@ while(num%2==0)
 	{big=2;
 	num/=2;
 	}
-for(int i=3;i<=sqrt(num);i+=2)
+for(int i=3;i<=num/2;i+=2)
 	{
 	while(num%i==0)
 		{big=i;
