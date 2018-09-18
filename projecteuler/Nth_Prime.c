@@ -1,11 +1,12 @@
 #include<stdio.h>
-#include<math.h>				//To check if the numbers are prime or not
+#include<math.h>				//To find the nth Prime number
 #define MAX 10000
 
 int isPrime(int num)
 {
-	int m,n,flag=1;
-	for(m=2;m<sqrt(double(num));m++)
+	int m,flag=1;
+	double n=num;
+	for(m=2;m<(n/2)+1;m++)
 	{
 		if(num%m==0)
 		{
@@ -13,7 +14,7 @@ int isPrime(int num)
 			break;
 		}
 	}
-return(flag);
+	return(flag);
 }
 
 
@@ -22,7 +23,7 @@ void main()
 {
 	int lim,N,i,arr[MAX];
 	printf("No of test cases:");
-	scanf("%d ",&lim);
+	scanf("%d",&lim);
 	for(i=0;i<lim;i++)
 	{
 		int count=1,j=2;
@@ -39,7 +40,7 @@ void main()
 	for(i=0;i<lim;i++)
 	{
 
-		printf("%d : %d \n",i,arr[i]);
+		printf("%d : %d \n",i+1,arr[i]);
 	}
 }
 
