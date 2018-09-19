@@ -1,3 +1,11 @@
+/*
+SELECTION SORT-
+Time Complexity: O(n2) as there are two nested loops.
+
+
+ */
+
+
 #include<stdio.h>
 
 void selectionsort(int arr[],int n)
