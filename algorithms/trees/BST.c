@@ -9,7 +9,7 @@ struct node{
 struct node* insert(struct node *tree,int item)
 {
   if(tree == NULL)
-    {tree = malloc(sizeof(struct node));
+    {tree = (struct node *)malloc(sizeof(struct node));
     tree->left = NULL;
     tree->right = NULL;
     tree->data = item;
