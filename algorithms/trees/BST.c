@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 struct node{
   int data;
   struct node *right;
@@ -71,12 +72,27 @@ void postorder(struct node *tree)
   preorder(tree->right);
   printf("%d\n",tree->data);
 }
+
+void MinValue(struct node *tree){
+  while(tree->left != NULL){
+    tree = tree->left;
+  }
+  printf("Min Value %d\n",tree->data);
+}
+
+void MaxValue(struct node *tree){
+  while(tree->right != NULL){
+    tree = tree->right;
+  }
+  printf("Max Value%d\n",tree->data);
+}
+
 int main()
 {
 
   int ch,item;
   do{
-  printf("\n\tMENU\n\t1)Insert\n\t2)search\n\t3)Preorder\n\t4)inorder\n\t5)postorder\n\tEnter choice");
+  printf("\n\tMENU\n\t1)Insert\n\t2)search\n\t3)Preorder\n\t4)inorder\n\t5)postorder\n\t6)MinValue\n\t7)MaxValue\n\tEnter choice");
   scanf("%d",&ch);
   switch (ch) {
     case 1 : printf("Enter the value\n");
@@ -92,6 +108,10 @@ int main()
     case 4 : inorder(root);
               break;
     case 5 : postorder(root);
+              break;
+    case 6 : MinValue(root);
+              break;
+    case 7 : MaxValue(root);
               break;
   }
 }while(ch!=0);
