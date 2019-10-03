@@ -24,7 +24,7 @@ void bubblesort(){
 	}
 }
 int main(){
-	int i,n,value;
+	int i,n,value=0;
 
 	cout<<"Enter the array size\n";
 	cin>>n;
