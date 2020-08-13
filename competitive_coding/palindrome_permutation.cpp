@@ -8,7 +8,7 @@ int main(){
     unordered_map<char, int> hash;
     string str1;
     char temp;
-    int len, odd_counter;
+    int len = 0, odd_counter;
     bool result = true;
     
     getline(cin, str1);
@@ -19,17 +19,18 @@ int main(){
        if(temp != ' '){
             if(hash.find(temp) != hash.end()){
                 hash[temp] += 1;
+                len++;
             }
-            else
+            else{
                 hash[temp] = 1;
+                len++;
+           }
         }
     }
-
-    len = str1.length();
     if(len%2 == 0)
-        odd_counter = 1;
-    else
         odd_counter = 0;
+    else
+        odd_counter = 1;
 
     for(auto itr = hash.begin(); itr != hash.end();itr++){
         if(itr->second%2 != 0){
