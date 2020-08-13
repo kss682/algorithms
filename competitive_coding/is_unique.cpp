@@ -6,7 +6,7 @@ Check if a string has all unique characters
 #include<bits/stdc++.h>
 using namespace std;
 
-map<char, int> hash_char;
+unordered_map<char, int> hash_char;
 
 int main(){
     string str;
