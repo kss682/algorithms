@@ -139,7 +139,7 @@ class Purchase{
                 y = this->iphn_order - x;  
             }while(x >= 0 &&  y<= bzl->get_iphn_count());
             argt->set_iphn_order(arg_x);
-            bzl->set_ipod_order(this->iphn_order - arg_x);
+            bzl->set_iphn_order(this->iphn_order - arg_x);
             return min_iphn_cost;
         }
 
